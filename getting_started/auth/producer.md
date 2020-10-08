@@ -32,8 +32,8 @@ In order to use the UI, the certificate needs to be added to the browser. The Ch
 openssl pkcs12 -inkey privkey.pem -in <certificate file> -export -out certificate.p12
 ```
 
-2. Add the certificate.p12 file to the browser. 
-    1. With Chrome in Linux -
+2. Add the certificate.p12 file to the browser 
+    1. For Chrome in Linux -
         1. Go to **Settings > Privacy and Security** and click **More**
         2. Click the **Manage Certificates** option (Alternatively use the URL `chrome://settings/certificates` in the address bar)
         3. Under the **Your Certificates** option, click **Import** and  to the `certificate.p12` file. Enter the password if you have set one
@@ -44,7 +44,7 @@ openssl pkcs12 -inkey privkey.pem -in <certificate file> -export -out certificat
 		![Click Import](../resources/auth/chrome-lin2.png)<br>
 		*Import the certificate under the 'Your Certificates' option*
 
-    2. With Chrome in Windows -
+    2. For Chrome in Windows -
         1. Go to **Settings > Privacy and Security** and click **Security**
         2. Click the **Manage Certificates** option
         3. Under the **Personal** option, click Import and then click next when shown the **Certificate Import Wizard**, Click on browse and navigate to the `certificate.p12` file. Enter the password if you have set one
@@ -57,6 +57,8 @@ openssl pkcs12 -inkey privkey.pem -in <certificate file> -export -out certificat
 		
 		![Click Import](../resources/auth/chrome-win3.png)<br>
 		*Click Import under the 'Personal' option*
+
+    3. For Chrome in Mac OS, you can follow the instructions in [this](https://www.digicert.com/kb/managing-client-certificates.htm#chrome_import_cert_2) link
 
 After this, when using any Provider API a dialog will be triggered in the browser to choose a certificate. Choose a certificate and click OK.
 
