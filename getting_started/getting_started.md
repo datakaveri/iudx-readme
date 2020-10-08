@@ -45,14 +45,14 @@ Using IUDX involves
 - What we're interested in is the **id** of a resource. We can copy the id for one such resource and proceed to the next step.
 
 #### Discovery through APIs
-API Documentation for Catalogue APIs can be found [here](https://catalogue.iudx.org.in/apis).
+API Documentation for Catalogue APIs can be found [here](https://api.catalogue.iudx.org.in/apis).
 The catalogue provides discovery through 
 - Geolocation - Box, circle, complex polygon, line-string  
-  `https://catalogue.iudx.org.in/iudx/cat/v1/search?geoproperty=location&georel=within&geometry=Polygon&coordinates=[[[75.9,14.5],[72,13],[73,20],[75.9,14.5]]]`
+  `https://api.catalogue.iudx.org.in/iudx/cat/v1/search?geoproperty=location&georel=within&geometry=Polygon&coordinates=[[[75.9,14.5],[72,13],[73,20],[75.9,14.5]]]`
 - Properties - id, tags, type, resourceGroup, resourceServer, provider  
-  ` https://catalogue.iudx.org.in/iudx/cat/v1/search?property="[tags,provider]"&value="[[flood],[datakaveri.org/04a15c9960ffda227e9546f3f46e629e1fe4132b]]"`
+  ` https://api.catalogue.iudx.org.in/iudx/cat/v1/search?property="[tags,provider]"&value="[[flood],[datakaveri.org/04a15c9960ffda227e9546f3f46e629e1fe4132b]]"`
 - Text - Full text search on text properties  
-  ` https://catalogue.iudx.org.in/iudx/cat/v1/search?q=flood `
+  ` https://api.catalogue.iudx.org.in/iudx/cat/v1/search?q=flood `
 
 These apis return a standard response body. Every object in the *response* key has an **id** which is the id of the resource.
 
