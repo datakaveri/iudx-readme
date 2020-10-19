@@ -22,7 +22,7 @@ This will generate 2 files: `privkey.pem` and `csr.pem`. Please send the content
 **Warning**: Please ensure the `privkey.pem` is stored securely. Do not share it. If this file is lost, then a new CSR + certificate will need to be created.
 
 ## Obtaining Token
-A token can be obtained using the certificate which the consumer during the registration flow. These tokens have to be scoped to specific IUDX Resource Groups and actions associated with them. This can be done by specifying the Resource Group ID and the Resource Server API endpoints that the consumer wants to access, in the Token Request API. Whether the token is granted or not is dependent on whether the resource group/API endpoint is secure, and what policies have been set by the provider for the consumer. The Resource Server API endpoints which are available are:
+A token can be obtained using the certificate which the consumer during the registration flow. These tokens have to be scoped to specific IUDX Resource Groups and actions associated with them. This can be done by specifying the Resource Group ID and the Resource Server API endpoints that the consumer wants to access, in the [Token Request API](https://authdocs.iudx.org.in/#operation/post-auth-v1-token). Whether the token is granted or not is dependent on whether the resource group/API endpoint is secure, and what policies have been set by the provider for the consumer. The Resource Server API endpoints which are available are:
 
 * Latest Data
 `/ngsi-ld/v1/entities/<resource_group_id>`
@@ -36,3 +36,55 @@ A token can be obtained using the certificate which the consumer during the regi
 `/ngsi-ld/v1/subscription`
 
 Once the token is obtained, it can be used to call the Resource Server APIs.
+
+### curl command for Token API
+
+The following curl command can be used to request a token. Ensure that the command in the directory containing your certificate and private-key .PEM files. The `request` array can contain multiple objects that specify resource IDs and corresponding APIs for which access is desired. (For a token for access to the entire resource group, the resource group ID must be suffixed by `/*`)
+
+```
+curl -XPOST https://authorization.iudx.org.in/auth/v1/token --cert <certificate-filename> --key <private-key-filename> -H 'content-type: application/json' -d "{
+   "request":[
+      {
+         "id":"<resource-id>",
+         "apis":[
+            <list-of-APIs-to-be-called-on-resource>
+         ]
+      }
+   ]
+}
+
+```
+
+```
+# Example Request
+curl -XPOST https://authorization.iudx.org.in/auth/v1/token --cert cert.pem --key private-key.pem -H 'content-type: application/json' -d "{
+   "request":[
+      {
+         "id":"datakaveri.org/04a15c9960ffda227e9546f3f46e629e1fe4132b/rs.iudx.org.in/pune-aqm/*",
+         "apis":[
+            "/ngsi-ld/v1/subscription"
+         ]
+      },
+      {
+         "id":"datakaveri.org/04a15c9960ffda227e9546f3f46e629e1fe4132b/rs.iudx.org.in/pune-flood/item-28819",
+         "apis":[
+            "/ngsi-ld/v1/entities",
+            "/ngsi-ld/v1/entities/datakaveri.org/04a15c9960ffda227e9546f3f46e629e1fe4132b/rs.iudx.org.in/pune-flood"
+         ]
+      }
+   ]
+}"
+
+# Example Response
+{
+    "token": "authorization.iudx.org.in/consumer@datakaveri.org/5d26f8526d75f5ed9407d7a808edac38",
+    "token-type": "IUDX",
+    "expires-in": 604800,
+    "is_token_valid": true,
+    "server-token": {
+        "rs.iudx.org.in": true
+    }
+}
+
+```
+
