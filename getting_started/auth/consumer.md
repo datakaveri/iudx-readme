@@ -51,12 +51,14 @@ curl -XPOST https://authorization.iudx.org.in/auth/v1/token --cert <certificate-
          ]
       }
    ]
-}
+}"
 
 ```
+Example:
 
 ```
 # Example Request
+
 curl -XPOST https://authorization.iudx.org.in/auth/v1/token --cert cert.pem --key private-key.pem -H 'content-type: application/json' -d "{
    "request":[
       {
