@@ -82,13 +82,19 @@ A provider can also delegate the responsibility of uploading resources to the IU
 ## Consumer Access
 A provider can grant access to consumers for the resources they own. This is done by specifying the consumer email address and which capabilities should be enabled for them. The three capabilities available are: Temporal, Complex and Subscription.
 
+![Add a consumer policy](../resources/auth/access-co.png)<br>
+*Add a consumer policy*
+
 ## View Policies
-A provider can also view all policies currently set for both ingesters and onboarders.
+A provider can also view all policies currently set for data ingesters, onboarders and consumers.
 
 ![View policies set for onboarders](../resources/auth/view-onboarder.png)<br>
 *View policies set for onboarders*
 
 
 ![View policies set for data ingesters](../resources/auth/view-ingester.png)<br>
-*View policies set for data ingester*
+*View policies set for data ingesters*
 
+
+![View policies set for consumers](../resources/auth/view-consumer.png)<br>
+*View policies set for consumers*
