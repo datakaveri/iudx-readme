@@ -6,7 +6,7 @@ The IUDX Auth Provider API is used to obtain provider certificates and authoriza
 
 ## Registration
 
-The IUDX Admin team will initiate a provider registration by first creating an entry for the provider’s organization. A new provider must then register (Registration Panel) with the IUDX platform with some basic identification details. These details include their name, organization email address and phone number. Additionally, they should also generate a Certificate Signing Request (CSR) and include that in the API call. This CSR is used to generate a signed certificate which will be delivered to the email address they have specified, after their registration request has been approved by the IUDX Admin team.
+The IUDX Admin team will initiate a provider registration by first creating an entry for the provider’s organization. A new provider must then register ([Registration Panel](accounts.iudx.org.in/register)) with the IUDX platform with some basic identification details. These details include their name, organization email address and phone number. Additionally, they should also generate a Certificate Signing Request (CSR) and include that in the API call. This CSR is used to generate a signed certificate which will be delivered to the email address they have specified, after their registration request has been approved by the IUDX Admin team.
 
 ![Provider registration](../resources/auth/prov-reg.png)<br>
 *Provider registration*
