@@ -81,7 +81,7 @@ A Consumer may view the resources and capabilities they have been given access t
 
 A Consumer may also view their issued tokens (each token is identified by the UUID). For more details on the _status_ of the token and associated resources, please read the documentation for the [GET /auth/v1/token API](https://authdocs.iudx.org.in/v2.5/#operation/get-auth-v1-token)
 
-![Generate token for selected resources](../resources/auth/view-tokens.png)<br>
-*Generate token for selected resources*
+![View all issued tokens](../resources/auth/view-tokens.png)<br>
+*View all issued tokens*
 
 For additional token operations, please read the [documentation](https://authdocs.iudx.org.in/v2.5).
