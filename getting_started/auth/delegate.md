@@ -71,9 +71,9 @@ After this, when going to the [Accounts Panel](https://accounts.iudx.org.in), th
 
 ## Manage Policies
 
-In the dashboard, a Delegate may view the Providers have granted access to them as well as switch between Providers. Once a Provider is chosen, the Delegate can read, write and update policies for that Provider.
+In the dashboard, a Delegate may view and switch between the Providers who have granted them access. Once a Provider is chosen, the Delegate can read, write and update policies for that Provider.
 
 ![View and change Providers](../resources/auth/view-delegate-providers.png)<br>
 *View and change Providers*
 
-To manage policies for consumers, onboarders and data ingesters, please see the associated sections in [Getting Started: Provider](./producer.md). **Note that delegates may not modify delegate policies.**
+To manage policies for consumers, onboarders and data ingesters, please see the associated sections in [Getting Started: Provider](./producer.md). **Note that delegates may not create/update/delete delegate policies.**
