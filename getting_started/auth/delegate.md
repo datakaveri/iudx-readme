@@ -4,7 +4,7 @@
 The IUDX Auth Delegate API is used to obtain certificate. The certificate is used to uniquely identify a delegate and is issued by the IUDX Certificate Authority. It can be obtained from the Registration API. A Delegate may manage access policies on behalf of multiple Providers. Once a Provider has set a Delegate policy, the Delegate may access the Provider Dashboard using the [Accounts Panel](https://accounts.iudx.org.in)
 
 ## Registration
-A new delegate must register ([Delegate Registration Panel](https://accounts.iudx.org.in/register)) with the IUDX platform with some basic identification details. These details include their name, email address and phone number. Additionally, they should also generate a Certificate Signing Request (CSR) and include that in the API call. This CSR is used to generate a signed certificate which will be delivered to the email address they have specified.
+A new delegate must register ([Delegate Registration Panel](https://accounts.iudx.org.in/register)) with the IUDX platform with some basic identification details. These details include their name, email address and phone number. Additionally, they should also generate a Certificate Signing Request (CSR) that is to be uploaded during registration. This CSR is used to generate a signed certificate which will be delivered to the email address they have specified.
 
 ![Delegate registration](../resources/auth/dele-reg.png)<br>
 *Delegate registration*

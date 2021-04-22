@@ -4,7 +4,7 @@
 The IUDX Auth Consumer API is used to obtain consumer certificates and authorization tokens. The certificate is used to uniquely identify a consumer and is issued by the IUDX Certificate Authority. It can be obtained from the Registration API. The authorization tokens are obtained using the certificate, by specifying the resources which the consumer wants to access, along with the capabilities. Both these API flows are specified below. A consumer may view the resources they have been granted access to and obtain tokens using the [Accounts Panel](https://accounts.iudx.org.in)
 
 ## Registration
-A new consumer must register ([Consumer Registration Panel](https://accounts.iudx.org.in/register)) with the IUDX platform with some basic identification details. These details include their name, email address and phone number. Additionally, they should also generate a Certificate Signing Request (CSR) and include that in the API call. This CSR is used to generate a signed certificate which will be delivered to the email address they have specified.
+A new consumer must register ([Consumer Registration Panel](https://accounts.iudx.org.in/register)) with the IUDX platform with some basic identification details. These details include their name, email address and phone number. Additionally, they should also generate a Certificate Signing Request (CSR) that is to be uploaded during registration. This CSR is used to generate a signed certificate which will be delivered to the email address they have specified.
 
 ![Consumer registration](../resources/auth/cons-reg.png)<br>
 *Consumer registration*
