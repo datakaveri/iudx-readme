@@ -5,7 +5,7 @@ IUDX - India Urban Data Exchange is a data exchange and discovery platform suppo
 
 A brief architecture of IUDX is as shown below.
 <p align="center">
-<img src="./resources/IUDXArch.png">
+<img src="./resources/IUDX_Arch_3.0.png">
 </p>
 
 
@@ -59,6 +59,9 @@ These apis return a standard response body. Every object in the *response* key h
 
 ### Access
 API Documentation for Resource Server APIs can be found [here](https://rs.iudx.org.in/apis).
+
+**NOTE:** Starting from IUDX 3.0, all API calls irrespective of it being an Open resource or a Secure resource, will require token to be presented. Refer Create Token API in (https://authorization.iudx.org.in/apis#operation/post-auth-v1-token) for more details. Once a valid token is obtained, the following operations can be made.
+
 The **id** of a dataset obtained previously can be used with the Resource Server (RS) APIs to obtain the data. Let's say the id so obtained was  
 `datakaveri.org/04a15c9960ffda227e9546f3f46e629e1fe4132b/rs.iudx.org.in/pune-env-flood/FWR053`.  
 Some of the apis are - 
